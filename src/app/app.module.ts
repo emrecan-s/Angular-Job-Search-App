@@ -1,10 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {DataService} from './data.service';
+import { FilterPipeModule } from 'ngx-filter-pipe';
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +15,7 @@ import {DataService} from './data.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule, FormsModule, FilterPipeModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

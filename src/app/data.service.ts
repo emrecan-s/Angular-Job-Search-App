@@ -6,7 +6,7 @@ import { Jobs } from "./user.model";
 	providedIn: "root"
 })
 export class DataService {
-	apiUrl = "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=python&location=new+york"
+	apiUrl = "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=&location="
 
 	constructor(private _http: HttpClient) {}
 	getTypes() {

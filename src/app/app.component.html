@@ -1,10 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1> Find Your Dev Job</h1>
- <input type="text" placeholder="Search..">
-<div *ngFor="let job of jobs">
+ <input type="text" [(ngModel)]="searchText.location" placeholder="Type to filter by location"/>
+<h4> There are {{(jobs | filterBy: searchText).length}} jobs in our database</h4>
+<div  class="card" *ngFor="let job of jobs | filterBy:searchText">
    <h2>	{{job.title}} - {{job.company}}</h2>
 	<h3>{{job.type}} - {{job.location}}</h3>
+	<h4> <a href="{{job.url}}">Apply here</a></h4>
    <p [innerHTML]="job.description"></p>
-   <div>	
-
+   </div>	
+<li *ngIf="(jobs | filterBy: searchText).length === 0">
+      There is job opening in your location :/
+    </li>
 <router-outlet></router-outlet>

@@ -1,0 +1,14 @@
+$borderColor:lightgrey;
+
+@mixin box {
+  background-color: $borderColor;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+
+//define job box element and header search box
+.jobBox,
+.header {
+  @include box;
+}

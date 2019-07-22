@@ -14,13 +14,20 @@ import {
 import {
   FilterPipe
 } from 'ngx-filter-pipe';
+import {
+  HeaderComponent
+} from './header/header.component';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
+
 export class AppComponent implements OnInit {
-  jobs: any= [];
+  jobs: any = [];
+  header1: string = ""
   searchText: any = {
     location: ''
   };
@@ -32,9 +39,8 @@ export class AppComponent implements OnInit {
   }
 
   displaydata(data) {
-console.log(this.searchText);
     this.jobs = data;
-    console.log(this.jobs)
+
   }
 
 }

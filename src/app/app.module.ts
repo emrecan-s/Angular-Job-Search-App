@@ -1,16 +1,36 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import {HttpClientModule} from '@angular/common/http';
-import {DataService} from './data.service';
-import { FilterPipeModule } from 'ngx-filter-pipe';
+import {
+  BrowserModule
+} from '@angular/platform-browser';
+import {
+  NgModule,
+} from '@angular/core';
+import {
+  FormsModule
+} from '@angular/forms';
+import {
+  AppRoutingModule
+} from './app-routing.module';
+import {
+  AppComponent
+} from './app.component';
+import {
+  HttpClientModule
+} from '@angular/common/http';
+import {
+  DataService
+} from './data.service';
+import {
+  FilterPipeModule
+} from 'ngx-filter-pipe';
+import {
+  HeaderComponent
+} from './header/header.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -20,4 +40,4 @@ import { FilterPipeModule } from 'ngx-filter-pipe';
   providers: [DataService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
